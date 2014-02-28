@@ -12,8 +12,8 @@ fis.config.set('modules.postpackager', function(ret, conf, settings, opt){
     };
 
     function next(id, obj, type) {
-        var info = fis.util.clone(obj);
-        if (info['type'] == 'js') {
+        if (obj['type'] == 'js') {
+            var info = fis.util.clone(obj);
             info['url'] = info['uri'];
 
             delete info['extras'];
